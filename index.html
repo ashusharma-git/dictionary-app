@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word checker </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(255, 241, 224);
+        }
+        .head-container{
+            height: 90px;
+            width: 100%;
+            /* background-color: rgb(121, 77, 163); */
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+        .body-container{
+            /* background-color: rgb(251, 220, 183); */
+            height: 600px;
+            width: 100%;
+            margin-top: 40px;
+        }
+        .logo img{
+            height: 80px;
+            width: auto;
+            border-radius: 20%;
+            /* margin-left: -5px; */
+        }
+        .heading{
+            font-size: 18px;
+            font-weight: 100;
+        }
+        .button-area{
+            max-width: 300px; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container shadow bg-white head-container">
+            <div class="row">
+                <div class="logo p-1">
+                    <img src="logo.png" alt="">
+                </div>
+                <div class="heading my-auto mx-3">Valid English Word Checker</div>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container body-container">
+            <div class="row mx-auto button-area">
+                <form action="http://localhost:3333/search" method="get" enctype="multipart/form-data" id="search-form">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control border-danger" id="word" placeholder="Input word to check" aria-label="word">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-danger" type="submit" id="button-addon2">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
